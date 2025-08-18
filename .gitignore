@@ -1,2 +1,3 @@
-data/*
-!data
+data/autoclicker.json
+data/data.json
+data/waypoints.json
