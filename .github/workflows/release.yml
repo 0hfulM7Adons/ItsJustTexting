@@ -24,7 +24,7 @@ jobs:
           cp -r components "$INNER_FOLDER_NAME/"
           cp -r data "$INNER_FOLDER_NAME/"
           cp -r features "$INNER_FOLDER_NAME/"
-          cp -r utils "$INNER_FOLDER_NAME/"
+          cp -r util "$INNER_FOLDER_NAME/"
           cp config.js "$INNER_FOLDER_NAME/"
           cp index.js "$INNER_FOLDER_NAME/"
           cp metadata.json "$INNER_FOLDER_NAME/"
