@@ -1,6 +1,6 @@
 import PogObject from "../../PogData/index"
 
-export const data = new PogObject("Astra", {
+export const data = new PogObject("ItsJustTexting", {
     sst: {
         x: Renderer.screen.getWidth() / 2,
         y: Renderer.screen.getHeight() / 2 + 20,
@@ -13,12 +13,12 @@ export const data = new PogObject("Astra", {
     }
 }, "data/data.json")
 
-export const waypointData = new PogObject("Astra", {
+export const waypointData = new PogObject("ItsJustTexting", {
     waypoints: [],
     rings: []
 }, "data/waypoints.json")
 
-export const acData = new PogObject("Astra", {
+export const acData = new PogObject("ItsJustTexting", {
     lcItems: [],
     rcItems: []
 }, "data/autoclicker.json")
