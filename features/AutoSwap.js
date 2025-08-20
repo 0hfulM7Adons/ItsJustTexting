@@ -15,7 +15,7 @@ register(MouseEvent, (event) => {
     const heldItemName = Player?.getHeldItem()?.getName()?.toLowerCase();
     if (!heldItemName) return;
 
-    if (heldItemName.toLowerCase().includes("bonemerang")) {
+    if (heldItemName.toLowerCase().includes("death")) {
         Client.scheduleTask(1, () => performSwap(getSwap()))
     } else if (heldItemName.toLowerCase().includes("breath") && config.lbSwap) {
         Client.scheduleTask(1, () => performSwap("terminator"))
