@@ -4,8 +4,19 @@ import { MouseEvent, regions, isPlayerInBox  } from "../util/util"
 
 let swapping = false;
 
-register(MouseEvent, (event) => {
+register("chat", () => {
+    swapRegister.register()
+}).setCriteria("[BOSS] Storm: Pathetic Maxor, just like expected.")
 
+register("chat", () => {
+    swapRegister.unregister()
+}).setCriteria("[BOSS] Storm: At least my son died by your hands.")
+
+register("WorldLoad", () => {
+    swapRegister.unregister()
+})
+
+const swapRegister = register(MouseEvent, (event) => {
     const button = event.button;
     const state = event.buttonstate;
 
@@ -15,13 +26,13 @@ register(MouseEvent, (event) => {
     const heldItemName = Player?.getHeldItem()?.getName()?.toLowerCase();
     if (!heldItemName) return;
 
-    if (heldItemName.toLowerCase().includes("bonemerang")) {
+    if (heldItemName.toLowerCase().includes("death bow")) {
         Client.scheduleTask(1, () => performSwap(getSwap()))
     } else if (heldItemName.toLowerCase().includes("breath") && config.lbSwap) {
         Client.scheduleTask(1, () => performSwap("terminator"))
     }
 
-})
+}).unregister()
 
 function performSwap(item) {
 
