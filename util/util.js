@@ -18,8 +18,19 @@ export const START_MESSAGE = "[NPC] Mort: Here, I found this map when I first en
 
 export const regions = {
     p1: [42, 105, 220, 230, 12, 84],
-    p2: [18, 129, 163, 213, 0, 107],
-    mid: [46, 63, 58, 96, 68, 85]
+    p2: [20, 85, 163, 213, 0, 107],
+    gpad: [20, 42, 170, 172, 0, 22],
+    pillars: [33, 60, 165, 195, 31, 76],
+    ppillar: [87, 114, 163, 172, 31, 76],
+    ppad: [87, 127, 163, 172, 85, 107],
+    ypad: [21, 52, 165, 177, 85, 107],
+    s1: [89, 113, 106, 143, 30, 122],
+    s2: [19, 111, 106, 143, 121, 145],
+    s3: [-6, 20, 106, 143, 50, 143],
+    s4: [-2, 89, 106, 143, 30, 51],
+    drop: [36, 73, 58, 96, 95, 122],
+    mid: [46, 63, 58, 96, 68, 85],
+    p5: [14, 99, 5, 8, 52, 134]
 };
 
 export function isPlayerInBox(x1, x2, y1, y2, z1, z2) {
@@ -89,3 +100,8 @@ export function rightClick() {
     rightClickMethod.setAccessible(true);
     rightClickMethod.invoke(Client.getMinecraft(), null);
 } 
+
+const gameSettings = Client.getMinecraft().field_71474_y;
+export function releaseForward() {
+    KeyBinding.func_74510_a(gameSettings.field_74351_w.func_151463_i(), false);
+}

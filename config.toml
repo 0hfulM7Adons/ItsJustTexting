@@ -6,8 +6,10 @@
 [boss_waypoints]
 
 	[boss_waypoints.general]
+		chest_triggerbot = true
 		line_starting_point = 1
 		toggle = true
+		chest_place_timing = 1.5
 		ee2_jump_line = true
 		jump_rings = true
 
@@ -15,6 +17,7 @@
 		show_through_blocks = true
 		waypoint_color = "255,144,224,239"
 		jump_ring_color = "255,0,255,0"
+		chest_waypoint_color = "76,0,0,255"
 
 [auto_swap]
 

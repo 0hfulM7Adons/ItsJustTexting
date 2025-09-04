@@ -3,7 +3,7 @@ import {
     @CheckboxProperty,
     Color,
     @ColorProperty,
-    @PercentSliderProperty,
+    @DecimalSliderProperty,
     @SelectorProperty,
     @SwitchProperty,
     @TextProperty,
@@ -194,6 +194,25 @@ class Settings {
     lineMode = 0;
 
     @SwitchProperty({
+        name: "Chest Triggerbot",
+        category: "Boss Waypoints",
+        subcategory: "General"
+    })
+    chestTriggerbot = false;
+
+    @DecimalSliderProperty({
+        name: "Chest Place Timing",
+        description: "Changes when the chest places when chesting a stair\nHigher number means the chest will place earlier and you can aim higher",
+        category: "Boss Waypoints",
+        subcategory: "General",
+        minF: 1,
+        maxF: 3
+    })
+    chestTicks = 2;
+
+    // Color
+
+    @SwitchProperty({
         name: "Show Through Blocks",
         category: "Boss Waypoints",
         subcategory: "Color"
@@ -213,6 +232,13 @@ class Settings {
         subcategory: "Color"
     })
     ringColor = new Color(1, 0, 0, 1);
+
+    @ColorProperty({
+        name: "Chest Waypoint Color",
+        category: "Boss Waypoints",
+        subcategory: "Color"
+    })
+    chestColor = new Color(0, 0, 1, 1);
 
     /*
     Relic Triggerbot

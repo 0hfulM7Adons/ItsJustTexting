@@ -15,7 +15,8 @@ export const data = new PogObject("ItsJustTexting", {
 
 export const waypointData = new PogObject("ItsJustTexting", {
     waypoints: [],
-    rings: []
+    rings: [],
+    chests: []
 }, "data/waypoints.json")
 
 export const acData = new PogObject("ItsJustTexting", {
