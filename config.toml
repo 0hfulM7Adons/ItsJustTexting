@@ -40,15 +40,15 @@
 	[auto_clicker.right_click]
 		no_block = true
 		min_cps = 13
-		right_click = true
+		right_click = false
 		max_cps = 15
 		hold_confirmation_time = 146
 
 [trap]
 	waypoint_color = "255,255,170,0"
 	tac_trap_waypoint = true
-	x_offset = 2
-	z_offset = 0
+	x_offset = 1
+	z_offset = 1
 
 [tact_insert_cooldown]
 	tactical_insertion_cooldown_timer = true

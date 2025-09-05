@@ -2,7 +2,7 @@
     "name":"ItsJustTexting",
     "author": "ohful",
     "entry": "index.js",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "not telling", 
     "requires": [] 
 }

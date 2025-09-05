@@ -17,7 +17,7 @@ register(MouseEvent, (event) => {
 
     if (heldItemName.toLowerCase().includes("death")) {
         Client.scheduleTask(1, () => performSwap(getSwap()))
-    } else if (heldItemName.toLowerCase().includes("breath") && config.lbSwap && isPlayerInBox(...regions.pillars)) {
+    } else if (heldItemName.toLowerCase().includes("breath") && config.lbSwap && (isPlayerInBox(...regions.pillars) || isPlayerInBox(...regions.ppillar))) {
         Client.scheduleTask(1, () => performSwap("terminator"))
     }
 
