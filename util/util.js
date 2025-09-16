@@ -1,4 +1,5 @@
 export const RenderUtils = Java.type("me.odinmain.utils.render.RenderUtils");
+export const Rendererr = Java.type("me.odinmain.utils.render.Renderer");
 export const ColorUtils = Java.type("me.odinmain.utils.render.Color");
 export const AxisAlignedBB = Java.type("net.minecraft.util.AxisAlignedBB");
 export const javaColor = Java.type("java.awt.Color");

@@ -14,7 +14,7 @@ import {
 
 @Vigilant("ItsJustTexting", "§9bro its just texting", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ["Trap", "Secret Spawn Timer", "Tact Insert Cooldown", "Auto Swap", "Boss Waypoints", "Relic Triggerbot", "Auto Clicker"];
+        const categories = ["Trap", "Secret Spawn Timer", "Tact Insert Cooldown", "Auto Swap", "Boss Waypoints", "Relic Triggerbot", "Auto Clicker", "Rapid Fire Trajectory"];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
@@ -319,6 +319,23 @@ class Settings {
         max: 1000
     })
     holdTime = 200;
+
+    /*
+    Rapid Fire Trajectory
+    */
+
+    @SwitchProperty({
+        name: "Rapid Fire Trajectory",
+        description: "Shows where archer rapid fire arrows will travel",
+        category: "Rapid Fire Trajectory"
+    })
+    rapidFireTrajectory = false;
+
+    @ColorProperty({
+        name: "Trajectory Color",
+        category: "Rapid Fire Trajectory"
+    })
+    trajectoryColor = new Color(1, 1, 1, 1);
 
     /*
     Constructor

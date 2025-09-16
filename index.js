@@ -7,6 +7,7 @@ import "./features/AutoSwap"
 import "./features/BossWaypoints"
 import "./features/RelicTriggerbot"
 import "./features/AutoClicker"
+import "./features/RapidFireTrajectory"
 
 register("command", () => {
     return config.openGUI();

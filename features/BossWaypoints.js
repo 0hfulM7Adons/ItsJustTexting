@@ -226,7 +226,7 @@ const chest = register("renderWorld", () => {
                     if (Math.abs(zDist) > 0.8 && Math.abs(zDist) < 0.8 + (config.chestTicks * Math.abs(zMotion))) {
                         if (Date.now() - lastClick > 1000) {
                             if (zMotion == 0) return;
-                            releaseForward();
+                            // releaseForward();
                             rightClick();
                             lastClick = Date.now();
                         }
@@ -239,7 +239,7 @@ const chest = register("renderWorld", () => {
                     if (Math.abs(xDist) > 0.8 && Math.abs(xDist) < 1 + (config.chestTicks * Math.abs(xMotion))) {
                         if (Date.now() - lastClick > 1000) {
                             if (xMotion == 0) return;
-                            releaseForward();
+                            // releaseForward();
                             rightClick();
                             lastClick = Date.now();
                         }
