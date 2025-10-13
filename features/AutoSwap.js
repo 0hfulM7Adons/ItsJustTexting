@@ -34,7 +34,6 @@ function performSwap(item) {
     if (ind < 0) return;
     if (ind > -1 && ind < 8) {
         swapping = true;
-        ChatLib.chat(`swapping to ${ind}`)
         Player.setHeldItemIndex(ind);
         swapping = false;
     }

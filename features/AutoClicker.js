@@ -98,7 +98,7 @@ register(MouseEvent, (event) => {
         if (!uuid || !data.lcItems.includes(uuid)) return;
 
         cancel(event);
-        lcac.register()
+        lcac.register();
     } else {
         lcac.unregister();
     }
@@ -155,13 +155,13 @@ register("packetSent", () => {
     if (item) {
         const uuid = getItemUUID(item);
         if (uuid) {
-            if (!data.lcItems.includes(uuid)) lcac.unregister();
-            if (!data.rcItems.includes(uuid)) rcac.unregister();
-        } else {
-            lcac.unregister();
-            rcac.unregister();
+            if (!data.lcItems.includes(uuid)) return lcac.unregister();
+            if (!data.rcItems.includes(uuid)) return rcac.unregister();
         }
     }
+
+    lcac.unregister();
+    rcac.unregister();
 
 }).setFilteredClass(C09PacketHeldItemChange)
 
@@ -176,7 +176,7 @@ const lcac = register("step", () => {
     lastlc = Date.now();
     lcdelay = 1000 / (Math.random() * (config.lcMax - config.lcMin) + config.lcMin);
 
-}).setFps(1000).unregister()
+}).setFps(240).unregister()
 
 let lastrc = 0;
 let rcdelay = 1000 / (Math.random() * (config.rcMax - config.rcMin) + config.rcMin);
@@ -189,4 +189,4 @@ const rcac = register("step", () => {
     lastrc = Date.now();
     rcdelay = 1000 / (Math.random() * (config.rcMax - config.rcMin) + config.rcMin);
 
-}).setFps(1000).unregister()
+}).setFps(240).unregister()

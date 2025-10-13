@@ -1,5 +1,5 @@
 import config from "../config"
-import { Vec3, RenderUtils, Rendererr, ColorUtils, javaColor, getClassWithLevel, romanToInt } from "../util/util"
+import { Vec3, Rendererr, ColorUtils, javaColor, getClassWithLevel, romanToInt } from "../util/util"
 
 const mc = Client.getMinecraft().func_175598_ae();
 

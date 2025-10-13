@@ -1,6 +1,6 @@
 import config from "../config"
-import DmapDungeon from "../components/DmapDungeon"
-import { componentToRealCoords } from "../components/MapUtils"
+import DmapDungeon from "../../ValleyAddons/components/DmapDungeon"
+import { componentToRealCoords } from "../../ValleyAddons/components/MapUtils"
 import { START_MESSAGE, RenderUtils, ColorUtils, AxisAlignedBB, javaColor } from "../util/util"
 
 let trap;
