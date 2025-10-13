@@ -21,7 +21,6 @@ jobs:
 
           mkdir -p "$INNER_FOLDER_NAME"
 
-          cp -r components "$INNER_FOLDER_NAME/"
           cp -r features "$INNER_FOLDER_NAME/"
           cp -r util "$INNER_FOLDER_NAME/"
           cp config.js "$INNER_FOLDER_NAME/"
