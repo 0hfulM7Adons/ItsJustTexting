@@ -198,7 +198,7 @@ const chest = register("renderWorld", () => {
 
     let ID = Player.getHeldItem()?.getID();
 
-    if (ID != 54 && ID != 130 && ID != 146) return;
+    if (ID != 54 && ID != 130 && ID != 146 && ID != 88) return;
 
     const [playerX, playerY, playerZ] = [mc.field_78730_l, mc.field_78731_m, mc.field_78728_n]
     let chests = data.chests;

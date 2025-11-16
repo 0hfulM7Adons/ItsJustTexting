@@ -90,19 +90,29 @@ export function romanToInt(roman) {
     return total;
 }
 
-export function leftClick() {
-    const leftClickMethod = Client.getMinecraft().getClass().getDeclaredMethod("func_147116_af", null);
-	leftClickMethod.setAccessible(true);
-	leftClickMethod.invoke(Client.getMinecraft(), null);
-}
+// export function leftClick() {
+//     const leftClickMethod = Client.getMinecraft().getClass().getDeclaredMethod("func_147116_af", null);
+// 	leftClickMethod.setAccessible(true);
+// 	leftClickMethod.invoke(Client.getMinecraft(), null);
+// }
 
-export function rightClick() {
-    const rightClickMethod = Client.getMinecraft().getClass().getDeclaredMethod("func_147121_ag", null)
-    rightClickMethod.setAccessible(true);
-    rightClickMethod.invoke(Client.getMinecraft(), null);
-} 
+// export function rightClick() {
+//     const rightClickMethod = Client.getMinecraft().getClass().getDeclaredMethod("func_147121_ag", null)
+//     rightClickMethod.setAccessible(true);
+//     rightClickMethod.invoke(Client.getMinecraft(), null);
+// } 
 
 const gameSettings = Client.getMinecraft().field_71474_y;
 export function releaseForward() {
     KeyBinding.func_74510_a(gameSettings.field_74351_w.func_151463_i(), false);
+}
+
+export function leftClick() {
+    const key = Client.getMinecraft().field_71474_y.field_74312_F.func_151463_i();
+    KeyBinding.func_74507_a(key);
+}
+
+export function rightClick() {
+    const key = Client.getMinecraft().field_71474_y.field_74313_G.func_151463_i();
+    KeyBinding.func_74507_a(key);
 }

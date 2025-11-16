@@ -122,6 +122,7 @@ register(MouseEvent, (event) => {
         const uuid = getItemUUID(item);
         if (!uuid || !data.rcItems.includes(uuid)) return;
 
+        cancel(event);
         startHolding = Date.now();
         holding.register();
     } else {
