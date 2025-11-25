@@ -79,7 +79,7 @@ const editListener = register(MouseEvent, (event) => {
     if (!(lookingAt instanceof Block)) return;
 
     const [x, y, z] = [lookingAt.x, lookingAt.y, lookingAt.z];
-    if (!x || !y || !z) return;
+    if (x == null || y == null || z == null) return;
     if (editMode) handleWaypoint(x, y, z);
     if (ringEditMode) handleRing(x, y, z);
     if (chestEditMode) handleChest(x, y, z);

@@ -11,7 +11,7 @@ const tickCounter = register("packetReceived", () => {
 
     if (--ticks == 0) ticks = 20;
 
-}).setFilteredClass(S32PacketConfirmTransaction)
+}).setFilteredClass(S32PacketConfirmTransaction).unregister()
 
 const tickDisplay = register("renderOverlay", () => {
 
@@ -30,6 +30,7 @@ const checkSolo = register("tick", () => {
     if (partySize() > 1 && config.soloOnly) return checkSolo.unregister();
     
     tickDisplay.register();
+    tickCounter.register();
     checkSolo.unregister();
 
 }).unregister()
@@ -62,12 +63,14 @@ register("chat", (message) => {
 
     if (!message.includes("[BOSS] Maxor")) return;
 
+    tickCounter.unregister();
     tickDisplay.unregister();
 
 }).setCriteria("${message}")
 
 register("worldLoad", () => {
 
+    tickCounter.unregister();
     tickDisplay.unregister();
 
 })
